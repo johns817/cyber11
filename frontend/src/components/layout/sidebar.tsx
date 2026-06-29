@@ -15,14 +15,22 @@ import {
   CreditCard,
   User,
   Shield,
+  Award,
+  Swords,
+  Monitor,
+  Wrench,
 } from "lucide-react";
 
 const sidebarLinks = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/labs", label: "Labs", icon: Terminal },
+  { href: "/rooms", label: "Rooms", icon: Monitor },
   { href: "/challenges", label: "Challenges", icon: Zap },
   { href: "/paths", label: "Learning Paths", icon: BookOpen },
+  { href: "/certifications", label: "Certifications", icon: Award },
+  { href: "/compete", label: "Compete", icon: Swords },
   { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
+  { href: "/tools", label: "Tools", icon: Wrench },
   { href: "/teams", label: "Teams", icon: Users },
   { href: "/community", label: "Community", icon: MessageSquare },
   { href: "/profile", label: "Profile", icon: User },
