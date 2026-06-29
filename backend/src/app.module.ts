@@ -8,6 +8,9 @@ import { ChallengesModule } from "./challenges/challenges.module";
 import { GamificationModule } from "./gamification/gamification.module";
 import { TeamsModule } from "./teams/teams.module";
 import { NotificationsModule } from "./notifications/notifications.module";
+import { RoomsModule } from "./rooms/rooms.module";
+import { EventsModule } from "./events/events.module";
+import { CertificationsModule } from "./certifications/certifications.module";
 
 @Module({
   imports: [
@@ -34,6 +37,9 @@ import { NotificationsModule } from "./notifications/notifications.module";
     GamificationModule,
     TeamsModule,
     NotificationsModule,
+    RoomsModule,
+    EventsModule,
+    CertificationsModule,
   ],
 })
 export class AppModule {}

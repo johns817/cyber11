@@ -197,6 +197,92 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Certifications Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                Professional <span className="text-cyber-green">Certifications</span>
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                100% practical, hands-on exams. No multiple choice. Prove your skills in real environments.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                { code: "SEC0", name: "Foundational", color: "bg-green-500" },
+                { code: "SEC1", name: "Cyber Security 101", color: "bg-blue-500" },
+                { code: "SAL1", name: "SOC Analyst L1", color: "bg-purple-500" },
+                { code: "PT1", name: "Jr Pentester", color: "bg-red-500" },
+                { code: "AI1", name: "AI Security", color: "bg-yellow-500" },
+              ].map((cert) => (
+                <Card key={cert.code} className="text-center hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 rounded-full ${cert.color} mx-auto mb-3 flex items-center justify-center`}>
+                      <Shield className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="font-bold">{cert.code}</h3>
+                    <p className="text-xs text-muted-foreground mt-1">{cert.name}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-12 text-center">
+              <Link href="/certifications">
+                <Button variant="outline" size="lg">View All Certifications</Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Compete Section */}
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                Compete <span className="text-cyber-purple">Against Others</span>
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                King of the Hill, CTFs, team battles, and real-time competitions.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-3">
+              <Card className="border-yellow-500/30">
+                <CardContent className="p-6 text-center">
+                  <Trophy className="h-10 w-10 text-yellow-500 mx-auto mb-3" />
+                  <h3 className="font-bold text-lg">King of the Hill</h3>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Attack the same machine as other players. Hold the flag for 60 seconds to score.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-cyber-purple/30">
+                <CardContent className="p-6 text-center">
+                  <Target className="h-10 w-10 text-cyber-purple mx-auto mb-3" />
+                  <h3 className="font-bold text-lg">Networks</h3>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Multi-machine environments. Pivot through networks like a real pentester.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-cyber-blue/30">
+                <CardContent className="p-6 text-center">
+                  <Zap className="h-10 w-10 text-cyber-blue mx-auto mb-3" />
+                  <h3 className="font-bold text-lg">Live CTFs</h3>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Weekly competitions with prizes, rankings, and team battles.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="mt-12 text-center">
+              <Link href="/compete">
+                <Button variant="outline" size="lg">View Competitions</Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyber-purple/10 via-cyber-blue/10 to-cyber-green/10">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
